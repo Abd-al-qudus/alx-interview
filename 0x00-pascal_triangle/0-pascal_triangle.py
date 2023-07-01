@@ -3,7 +3,7 @@
     generates the pascal triangle of n
     """
 
- 
+
 def pascal_triangle(n):
     '''generates the nth term of the pascal triangle'''
     triangle = [[1], [1, 1]]
@@ -19,7 +19,7 @@ def pascal_triangle(n):
             new = []
             new.insert(0, 1)
             for j in range(1, len(last)):
-                sum = last[i - 1] + last[i]
+                sum = last[j - 1] + last[j]
                 new.insert(len(new), sum)
             new.insert(len(new), 1)
             triangle.insert(i, new)
