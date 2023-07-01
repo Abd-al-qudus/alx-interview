@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
     generates the pascal triangle of n
     """
