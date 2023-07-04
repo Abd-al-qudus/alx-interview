@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """
 lockboxes returns true when all boxes can be unlocked and vice versa
 """
