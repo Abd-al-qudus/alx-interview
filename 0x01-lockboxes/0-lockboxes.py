@@ -10,7 +10,7 @@ def canUnlockAll(boxes):
     if boxes[0]:
         lck_keys = boxes[0]
         for key in lck_keys:
-            if boxes[key] and:
+            if boxes[key]:
                 status = True
             else:
                 status = False
