@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Compute the minimum possible operation to copy
     and paste to reach a number of character"""
 
