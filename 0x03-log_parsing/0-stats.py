@@ -9,7 +9,6 @@ import signal
 def sig_int(sig, frame):
     """catch keyboard interruption"""
     print_status_codes(status, total_file_size)
-    exit(0)
 
 
 def print_status_codes(status_codes, total_size):
@@ -37,6 +36,7 @@ status = {
 }
 
 signal.signal(signal.SIGINT, sig_int)
+
 try:
     for line in sys.stdin:
         stdin_entry = line.strip()
@@ -48,10 +48,10 @@ try:
             line_count += 1
             for codes in status.keys():
                 if codes == status_code:
-                    status[codes] += 1
+                    if int(status_code):
+                        status[codes] += 1
         if line_count == 10:
             print_status_codes(status, total_file_size)
             line_count = 0
-except KeyboardInterrupt:
-    print_status_codes(status, total_file_size)
+finally:
     exit(0)
