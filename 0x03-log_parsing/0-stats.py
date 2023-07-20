@@ -5,7 +5,7 @@ import sys
 import re
 
 
-def print_status_codes(status_codes, total_size):
+def print_status_codes(status_codes: dict, total_size: int) -> None:
     """print status codes in list"""
     print("File size: {}".format(total_size))
     for code, count in status_codes.items():
