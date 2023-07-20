@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """This script reads standard input compute metrics
     after every ten lines or keyboard interrupt"""
 import sys
