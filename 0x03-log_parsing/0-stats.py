@@ -3,13 +3,6 @@
     after every ten lines or keyboard interrupt"""
 import sys
 import re
-import signal
-
-
-def sig_int(sig, frame):
-    """catch keyboard interruption"""
-    print_status_codes(status, total_file_size)
-    exit(0)
 
 
 def print_status_codes(status_codes, total_size):
@@ -36,8 +29,6 @@ status = {
     "500": 0
 }
 
-signal.signal(signal.SIGINT, sig_int)
-
 try:
     for line in sys.stdin:
         stdin_entry = line.strip()
@@ -56,4 +47,3 @@ try:
             line_count = 0
 except KeyboardInterrupt:
     print_status_codes(status, total_file_size)
-    exit(0)
