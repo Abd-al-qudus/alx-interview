@@ -9,6 +9,7 @@ import signal
 def sig_int(sig, frame):
     """catch keyboard interruption"""
     print_status_codes(status, total_file_size)
+    exit(0)
 
 
 def print_status_codes(status_codes, total_size):
@@ -53,5 +54,6 @@ try:
         if line_count == 10:
             print_status_codes(status, total_file_size)
             line_count = 0
-finally:
+except KeyboardInterrupt:
+    print_status_codes(status, total_file_size)
     exit(0)
