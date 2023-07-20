@@ -46,7 +46,6 @@ try:
             print_status_codes(status, total_file_size)
 except Exception as error:
     print_status_codes(status, total_file_size)
-    raise error
+    raise
 finally:
     print_status_codes(status, total_file_size)
-    exit()
