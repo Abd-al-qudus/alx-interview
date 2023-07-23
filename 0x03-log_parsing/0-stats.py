@@ -42,6 +42,8 @@ try:
                 if codes == status_code:
                     if int(status_code):
                         status[codes] += 1
+        else:
+            continue
         if line_count % 10 == 0:
             print_status_codes(status, total_file_size)
 except Exception as error:
