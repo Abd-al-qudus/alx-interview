@@ -21,10 +21,12 @@ def is_safe(board, row, col, N):
 
     return True
 
+
 def nqueens_helper(board, row, N, solutions):
     '''a function that creates a NxN board'''
     if row == N:
-        solution = [[r, c] for r in range(N) for c in range(N) if board[r][c] == 1]
+        solution = [[r, c] for r in range(N)
+                    for c in range(N) if board[r][c] == 1]
         solutions.append(solution)
         return
 
@@ -33,6 +35,7 @@ def nqueens_helper(board, row, N, solutions):
             board[row][col] = 1
             nqueens_helper(board, row + 1, N, solutions)
             board[row][col] = 0
+
 
 def nqueens(N):
     '''a function that calls the queen finction'''
