@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """this function validates a data whether it's
     correctly implemented utf-formatted or not,
     returns true and false otherwise"""
