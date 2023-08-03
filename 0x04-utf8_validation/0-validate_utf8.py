@@ -3,6 +3,7 @@
     correctly implemented utf-formatted or not,
     returns true and false otherwise"""
 
+
 def validUTF8(data):
     """check data whether its a valid utf-8 string"""
     num_bytes_to_follow = 0
